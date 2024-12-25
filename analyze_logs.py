@@ -1,12 +1,3 @@
-# Подсчёт строк в файле логов
-log_file = "activity_log.txt"
-
-try:
-    with open(log_file, "r") as log:
-        lines = log.readlines()
-        print(f"Total activity logs: {len(lines)}")
-except FileNotFoundError:
-    print("Log file not found. Please run log_activity.py first.")
 import datetime
 
 log_file = "activity_log.txt"
