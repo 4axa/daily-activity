@@ -34,4 +34,15 @@ for date, count in sorted(activity_count.items()):
 plt.figure(figsize=(10, 6))
 plt.bar(activity_count.keys(), activity_count.values(), color="skyblue")
 plt.title("Activity Logs Over Time", fontsize=16)
-plt.
+plt.xlabel("Date", fontsize=14)
+plt.ylabel("Logs Count", fontsize=14)
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Сохранение графика в файл
+output_file = "activity_graph.png"
+plt.savefig(output_file)
+print(f"Graph saved as {output_file}")
+
+# Отображение графика
+plt.show()
